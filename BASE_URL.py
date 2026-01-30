@@ -1,0 +1,1 @@
+BASE_URL = 'https://growth-dev.zhijianai.cc/api'
