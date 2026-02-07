@@ -7,7 +7,7 @@
       "name" : "咨询洗发水",
       "children" : [ {
         "name" : "多轮对话 - 咨询洗发水",
-        "uid" : "e64bf39a845dd6dc",
+        "uid" : "dc282a626c9b4b75",
         "parentUid" : "74e50cc5c1f375e941b8f8f50671744f",
         "status" : "broken",
         "time" : {
@@ -24,7 +24,7 @@
       "name" : "商品链接咨询",
       "children" : [ {
         "name" : "多轮对话 - 商品链接咨询",
-        "uid" : "fefa55159e25370",
+        "uid" : "a7fb20135ac4e9dd",
         "parentUid" : "ded103900028026533f328e21bb79394",
         "status" : "passed",
         "time" : {
@@ -45,7 +45,7 @@
       "name" : "效果怎么样？",
       "children" : [ {
         "name" : "商品问答 - 效果怎么样？",
-        "uid" : "5400916dcbead32f",
+        "uid" : "e2b55568d1b34ad7",
         "parentUid" : "2969a2793b5c3470c20a832a83036dad",
         "status" : "passed",
         "time" : {
@@ -62,7 +62,7 @@
       "name" : "如何使用？",
       "children" : [ {
         "name" : "商品问答 - 如何使用？",
-        "uid" : "1ead63296f3b8728",
+        "uid" : "8a90cc5e4b42d1f6",
         "parentUid" : "fc2a2673f97b98ade154998c87f09d78",
         "status" : "passed",
         "time" : {
@@ -79,7 +79,7 @@
       "name" : "可以用多长时间？",
       "children" : [ {
         "name" : "商品问答 - 可以用多长时间？",
-        "uid" : "f96a0cc661f31aff",
+        "uid" : "43fa193fd89f5dec",
         "parentUid" : "c2d4c487d4ee25db022bd20ba0128807",
         "status" : "passed",
         "time" : {
@@ -96,7 +96,7 @@
       "name" : "成分发一下？",
       "children" : [ {
         "name" : "商品问答 - 成分发一下？",
-        "uid" : "7f7c5618518172dc",
+        "uid" : "136c24138675dfbb",
         "parentUid" : "f82228602d9ad47de54c2d09b905d75b",
         "status" : "passed",
         "time" : {
@@ -113,7 +113,7 @@
       "name" : "使用哪个部位？",
       "children" : [ {
         "name" : "商品问答 - 使用哪个部位？",
-        "uid" : "9aecc029f9e233b2",
+        "uid" : "e3e98002fe201441",
         "parentUid" : "18b9cad9d55d20021405a4485734209d",
         "status" : "passed",
         "time" : {
@@ -130,7 +130,7 @@
       "name" : "都有什么味道？",
       "children" : [ {
         "name" : "商品问答 - 都有什么味道？",
-        "uid" : "48776f64e8dd0c67",
+        "uid" : "83017f86abe939c1",
         "parentUid" : "2f5407eb87f3a225dc6c8c10d5bbeb7c",
         "status" : "passed",
         "time" : {
@@ -147,7 +147,7 @@
       "name" : "保质期多久？",
       "children" : [ {
         "name" : "商品问答 - 保质期多久？",
-        "uid" : "89456fb2408d8265",
+        "uid" : "38de8910ff4d44ce",
         "parentUid" : "e760305c0a0f4f004024517b1aaaad9f",
         "status" : "passed",
         "time" : {
@@ -164,7 +164,7 @@
       "name" : "都有什么卖点？",
       "children" : [ {
         "name" : "商品问答 - 都有什么卖点？",
-        "uid" : "1a08b9d04076c5c4",
+        "uid" : "c20282f90dc63f77",
         "parentUid" : "f912836370c4348e177210df590fb0ee",
         "status" : "passed",
         "time" : {
@@ -181,7 +181,7 @@
       "name" : "都有什么规格？",
       "children" : [ {
         "name" : "商品问答 - 都有什么规格？",
-        "uid" : "d2b7cad1077260c9",
+        "uid" : "f9b0f4243bced232",
         "parentUid" : "218f2c34d90c59b084e0dc330cb4a2c6",
         "status" : "passed",
         "time" : {
@@ -198,7 +198,7 @@
       "name" : "有什么注意事项？",
       "children" : [ {
         "name" : "商品问答 - 有什么注意事项？",
-        "uid" : "a8f7acc5a54bb10e",
+        "uid" : "e42f147d7db186df",
         "parentUid" : "5570b4622fd7113e17e85cce0e6eaeb4",
         "status" : "passed",
         "time" : {
@@ -215,7 +215,7 @@
       "name" : "质检报告发一下？",
       "children" : [ {
         "name" : "商品问答 - 质检报告发一下？",
-        "uid" : "af7d228db546ebe",
+        "uid" : "db2d37cf71d7296b",
         "parentUid" : "a0465f203cc103859c3aa53770df276d",
         "status" : "passed",
         "time" : {
@@ -232,7 +232,7 @@
       "name" : "是正品吗？",
       "children" : [ {
         "name" : "商品问答 - 是正品吗？",
-        "uid" : "ae8c979132517e80",
+        "uid" : "6fc8f53779900f41",
         "parentUid" : "65d8a1de52c6e101d4d896ea8b1f53dc",
         "status" : "passed",
         "time" : {
@@ -249,7 +249,7 @@
       "name" : "如何打开？",
       "children" : [ {
         "name" : "商品问答 - 如何打开？",
-        "uid" : "ac51d37ac13cb1c8",
+        "uid" : "68938a7da3a52fc8",
         "parentUid" : "cbcc86549d30b214b259de8f72548037",
         "status" : "passed",
         "time" : {
@@ -266,7 +266,7 @@
       "name" : "什么材质的？",
       "children" : [ {
         "name" : "商品问答 - 什么材质的？",
-        "uid" : "c1e9d50db332d433",
+        "uid" : "137df81fca6f3a75",
         "parentUid" : "08dff5eb00969d7c111d7542db17ea38",
         "status" : "passed",
         "time" : {
@@ -283,7 +283,7 @@
       "name" : "适合什么人群？",
       "children" : [ {
         "name" : "商品问答 - 适合什么人群？",
-        "uid" : "578f48f4f1ceaa60",
+        "uid" : "49cabef260d0b028",
         "parentUid" : "a404c5e63e487cc8142f8b52969a9cc9",
         "status" : "passed",
         "time" : {
@@ -300,7 +300,7 @@
       "name" : "孕妇可以用吗？",
       "children" : [ {
         "name" : "商品问答 - 孕妇可以用吗？",
-        "uid" : "3b91ead6e4ba9dec",
+        "uid" : "eb861d3810a65746",
         "parentUid" : "7806e6a3469646435917ebd718cac54b",
         "status" : "passed",
         "time" : {

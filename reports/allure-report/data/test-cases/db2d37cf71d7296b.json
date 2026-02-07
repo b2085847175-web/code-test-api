@@ -1,0 +1,156 @@
+{
+  "uid" : "db2d37cf71d7296b",
+  "name" : "商品问答 - 质检报告发一下？",
+  "fullName" : "test_chat#test_product_chat",
+  "historyId" : "eef5e78509be1243fff3d70a939b2917",
+  "time" : {
+    "start" : 1770451535142,
+    "stop" : 1770451543984,
+    "duration" : 8842
+  },
+  "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+  "descriptionHtml" : "<pre><code>自动随机获取商品并提问测试：\n1. 从店铺商品列表中随机选取一个商品\n2. 用商品信息 + 问题发给 AI\n3. 验证 AI 能针对该商品给出回答\n\n每个问题都是独立的对话（不同 username），且随机选取不同商品\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1770451432277,
+      "stop" : 1770451432404,
+      "duration" : 127
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "随机获取商品",
+      "time" : {
+        "start" : 1770451535142,
+        "stop" : 1770451535200,
+        "duration" : 58
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "576bfce78885967e",
+        "name" : "商品信息",
+        "source" : "576bfce78885967e.json",
+        "type" : "application/json",
+        "size" : 192
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "发送问题: 质检报告发一下？",
+      "time" : {
+        "start" : 1770451535201,
+        "stop" : 1770451543982,
+        "duration" : 8781
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "ff2f4e2c3a0993b0",
+        "name" : "用户问题",
+        "source" : "ff2f4e2c3a0993b0.txt",
+        "type" : "text/plain",
+        "size" : 24
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    }, {
+      "name" : "验证 AI 回复",
+      "time" : {
+        "start" : 1770451543982,
+        "stop" : 1770451543983,
+        "duration" : 1
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "eaf878bdb30c958",
+        "name" : "AI 回复",
+        "source" : "eaf878bdb30c958.txt",
+        "type" : "text/plain",
+        "size" : 143
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 1
+    } ],
+    "attachments" : [ {
+      "uid" : "fff6487e4952f75f",
+      "name" : "用户名",
+      "source" : "fff6487e4952f75f.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 4
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "质检报告发一下？"
+  }, {
+    "name" : "feature",
+    "value" : "商品问答"
+  }, {
+    "name" : "suite",
+    "value" : "test_chat"
+  }, {
+    "name" : "host",
+    "value" : "WIN-VO7C9Q1F77H"
+  }, {
+    "name" : "thread",
+    "value" : "42900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "question",
+    "value" : "'质检报告发一下？'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "db2d37cf71d7296b.json",
+  "parameterValues" : [ "'质检报告发一下？'" ]
+}

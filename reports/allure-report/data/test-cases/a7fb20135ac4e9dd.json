@@ -1,0 +1,183 @@
+{
+  "uid" : "a7fb20135ac4e9dd",
+  "name" : "多轮对话 - 商品链接咨询",
+  "fullName" : "test_chat#test_chat_session",
+  "historyId" : "d852f47906458a8e82772e5c365dd1e8",
+  "time" : {
+    "start" : 1770451437123,
+    "stop" : 1770451472465,
+    "duration" : 35342
+  },
+  "description" : "\n    多轮对话测试：同一个用户连续发送多条消息\n    服务端根据 username 自动维护对话历史，客户端只需传当前消息\n    支持两种消息类型：\n    1. 普通文本消息: {\"txt\": \"你好\"}\n    2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n    ",
+  "descriptionHtml" : "<pre><code>多轮对话测试：同一个用户连续发送多条消息\n服务端根据 username 自动维护对话历史，客户端只需传当前消息\n支持两种消息类型：\n1. 普通文本消息: {&quot;txt&quot;: &quot;你好&quot;}\n2. 商品咨询消息: {&quot;txt&quot;: &quot;商品链接&quot;, &quot;product&quot;: {&quot;id&quot;: &quot;...&quot;, &quot;title&quot;: &quot;...&quot;, &quot;url&quot;: &quot;...&quot;}}\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1770451432277,
+      "stop" : 1770451432404,
+      "duration" : 127
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "stepsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    多轮对话测试：同一个用户连续发送多条消息\n    服务端根据 username 自动维护对话历史，客户端只需传当前消息\n    支持两种消息类型：\n    1. 普通文本消息: {\"txt\": \"你好\"}\n    2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "第 1 轮对话: http://item.taobao.com/item.ht",
+      "time" : {
+        "start" : 1770451437123,
+        "stop" : 1770451442813,
+        "duration" : 5690
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "8bd1950582d385e6",
+        "name" : "第 1 轮 - 商品信息",
+        "source" : "8bd1950582d385e6.json",
+        "type" : "application/json",
+        "size" : 190
+      }, {
+        "uid" : "b776890254d823a6",
+        "name" : "第 1 轮 - 用户消息",
+        "source" : "b776890254d823a6.txt",
+        "type" : "text/plain",
+        "size" : 47
+      }, {
+        "uid" : "2d5ace516ca9e5b1",
+        "name" : "第 1 轮 - AI 回复",
+        "source" : "2d5ace516ca9e5b1.txt",
+        "type" : "text/plain",
+        "size" : 179
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 3
+    }, {
+      "name" : "第 2 轮对话: 这个适合油性皮肤吗",
+      "time" : {
+        "start" : 1770451452828,
+        "stop" : 1770451458282,
+        "duration" : 5454
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "a21ec43862c12993",
+        "name" : "第 2 轮 - 用户消息",
+        "source" : "a21ec43862c12993.txt",
+        "type" : "text/plain",
+        "size" : 27
+      }, {
+        "uid" : "7647dfc2894c255c",
+        "name" : "第 2 轮 - AI 回复",
+        "source" : "7647dfc2894c255c.txt",
+        "type" : "text/plain",
+        "size" : 192
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2
+    }, {
+      "name" : "第 3 轮对话: 效果怎么样",
+      "time" : {
+        "start" : 1770451468293,
+        "stop" : 1770451472464,
+        "duration" : 4171
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "d7121c41d5bc080f",
+        "name" : "第 3 轮 - 用户消息",
+        "source" : "d7121c41d5bc080f.txt",
+        "type" : "text/plain",
+        "size" : 15
+      }, {
+        "uid" : "d75dfd56e3aea907",
+        "name" : "第 3 轮 - AI 回复",
+        "source" : "d75dfd56e3aea907.txt",
+        "type" : "text/plain",
+        "size" : 220
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "stepsCount" : 0,
+      "shouldDisplayMessage" : false,
+      "attachmentsCount" : 2
+    } ],
+    "attachments" : [ {
+      "uid" : "5e57a2ea65714f7f",
+      "name" : "用户名",
+      "source" : "5e57a2ea65714f7f.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "stepsCount" : 3,
+    "shouldDisplayMessage" : false,
+    "attachmentsCount" : 8
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "商品链接咨询"
+  }, {
+    "name" : "feature",
+    "value" : "多轮对话"
+  }, {
+    "name" : "suite",
+    "value" : "test_chat"
+  }, {
+    "name" : "host",
+    "value" : "WIN-VO7C9Q1F77H"
+  }, {
+    "name" : "thread",
+    "value" : "42900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "messages",
+    "value" : "[{'txt': 'http://item.taobao.com/item.htm?id=760746609877', 'product': {'id': '760746609877', 'title': 'b5水乳控油去收缩痘毛孔青少年补水套装正品官方旗舰店男士护肤品', 'url': 'http://item.taobao.com/item.htm?id=760746609877'}}, {'txt': '这个适合油性皮肤吗'}, {'txt': '效果怎么样'}]"
+  }, {
+    "name" : "session_name",
+    "value" : "'商品链接咨询'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "a7fb20135ac4e9dd.json",
+  "parameterValues" : [ "[{'txt': 'http://item.taobao.com/item.htm?id=760746609877', 'product': {'id': '760746609877', 'title': 'b5水乳控油去收缩痘毛孔青少年补水套装正品官方旗舰店男士护肤品', 'url': 'http://item.taobao.com/item.htm?id=760746609877'}}, {'txt': '这个适合油性皮肤吗'}, {'txt': '效果怎么样'}]", "'商品链接咨询'" ]
+}

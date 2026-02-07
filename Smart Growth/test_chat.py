@@ -166,3 +166,14 @@ if __name__ == "__main__":
     # 只运行商品问答测试: python test_chat.py -k "test_product_chat"
     # --clean-alluredir: 每次运行前清理旧数据，报告只展示最新结果
     pytest.main([__file__, "-v", "-s", f"--alluredir={ALLURE_RESULTS_DIR}", "--clean-alluredir"])
+
+    # 生成 Allure HTML 报告
+    allure_report_dir = os.path.join(os.path.dirname(ALLURE_RESULTS_DIR), "allure-report")
+    os.system(f'allure generate "{ALLURE_RESULTS_DIR}" -o "{allure_report_dir}" --clean')
+
+    # 发送测试报告邮件
+    from common.email_sender import send_test_report
+    send_test_report(
+        report_dir=allure_report_dir,
+        recipients=["zhaowenlong@zhijianai.cn"]
+    )
