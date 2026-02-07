@@ -1,0 +1,247 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "WIN-VO7C9Q1F77H",
+    "children" : [ {
+      "name" : "42900-MainThread",
+      "children" : [ {
+        "name" : "商品问答 - 适合什么人群？",
+        "uid" : "578f48f4f1ceaa60",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451564159,
+          "stop" : 1770451569395,
+          "duration" : 5236
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'适合什么人群？'" ]
+      }, {
+        "name" : "商品问答 - 可以用多长时间？",
+        "uid" : "f96a0cc661f31aff",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451486395,
+          "stop" : 1770451492822,
+          "duration" : 6427
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'可以用多长时间？'" ]
+      }, {
+        "name" : "商品问答 - 如何打开？",
+        "uid" : "ac51d37ac13cb1c8",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451549608,
+          "stop" : 1770451557844,
+          "duration" : 8236
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'如何打开？'" ]
+      }, {
+        "name" : "商品问答 - 使用哪个部位？",
+        "uid" : "9aecc029f9e233b2",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451499633,
+          "stop" : 1770451504537,
+          "duration" : 4904
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'使用哪个部位？'" ]
+      }, {
+        "name" : "商品问答 - 都有什么规格？",
+        "uid" : "d2b7cad1077260c9",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451520600,
+          "stop" : 1770451527204,
+          "duration" : 6604
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'都有什么规格？'" ]
+      }, {
+        "name" : "商品问答 - 孕妇可以用吗？",
+        "uid" : "3b91ead6e4ba9dec",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451569397,
+          "stop" : 1770451574277,
+          "duration" : 4880
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'孕妇可以用吗？'" ]
+      }, {
+        "name" : "商品问答 - 如何使用？",
+        "uid" : "1ead63296f3b8728",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451480878,
+          "stop" : 1770451486384,
+          "duration" : 5506
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'如何使用？'" ]
+      }, {
+        "name" : "商品问答 - 质检报告发一下？",
+        "uid" : "af7d228db546ebe",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451535142,
+          "stop" : 1770451543984,
+          "duration" : 8842
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'质检报告发一下？'" ]
+      }, {
+        "name" : "多轮对话 - 咨询洗发水",
+        "uid" : "e64bf39a845dd6dc",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "broken",
+        "time" : {
+          "start" : 1770451432405,
+          "stop" : 1770451436982,
+          "duration" : 4577
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]", "'咨询洗发水'" ]
+      }, {
+        "name" : "商品问答 - 什么材质的？",
+        "uid" : "c1e9d50db332d433",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451557850,
+          "stop" : 1770451564157,
+          "duration" : 6307
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'什么材质的？'" ]
+      }, {
+        "name" : "商品问答 - 是正品吗？",
+        "uid" : "ae8c979132517e80",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451543992,
+          "stop" : 1770451549599,
+          "duration" : 5607
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'是正品吗？'" ]
+      }, {
+        "name" : "商品问答 - 都有什么卖点？",
+        "uid" : "1a08b9d04076c5c4",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451514008,
+          "stop" : 1770451520593,
+          "duration" : 6585
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'都有什么卖点？'" ]
+      }, {
+        "name" : "多轮对话 - 商品链接咨询",
+        "uid" : "fefa55159e25370",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451437123,
+          "stop" : 1770451472465,
+          "duration" : 35342
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[{'txt': 'http://item.taobao.com/item.htm?id=760746609877', 'product': {'id': '760746609877', 'title': 'b5水乳控油去收缩痘毛孔青少年补水套装正品官方旗舰店男士护肤品', 'url': 'http://item.taobao.com/item.htm?id=760746609877'}}, {'txt': '这个适合油性皮肤吗'}, {'txt': '效果怎么样'}]", "'商品链接咨询'" ]
+      }, {
+        "name" : "商品问答 - 效果怎么样？",
+        "uid" : "5400916dcbead32f",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451472474,
+          "stop" : 1770451480875,
+          "duration" : 8401
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'效果怎么样？'" ]
+      }, {
+        "name" : "商品问答 - 成分发一下？",
+        "uid" : "7f7c5618518172dc",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451492828,
+          "stop" : 1770451499628,
+          "duration" : 6800
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'成分发一下？'" ]
+      }, {
+        "name" : "商品问答 - 有什么注意事项？",
+        "uid" : "a8f7acc5a54bb10e",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451527211,
+          "stop" : 1770451535134,
+          "duration" : 7923
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'有什么注意事项？'" ]
+      }, {
+        "name" : "商品问答 - 保质期多久？",
+        "uid" : "89456fb2408d8265",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451511353,
+          "stop" : 1770451514006,
+          "duration" : 2653
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'保质期多久？'" ]
+      }, {
+        "name" : "商品问答 - 都有什么味道？",
+        "uid" : "48776f64e8dd0c67",
+        "parentUid" : "d55c5f98bece705ff6bfb6f6645202ba",
+        "status" : "passed",
+        "time" : {
+          "start" : 1770451504544,
+          "stop" : 1770451511344,
+          "duration" : 6800
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "'都有什么味道？'" ]
+      } ],
+      "uid" : "d55c5f98bece705ff6bfb6f6645202ba"
+    } ],
+    "uid" : "6b494793dae32004e7ad0c05a1621787"
+  } ]
+}

@@ -1,0 +1,133 @@
+{
+  "uid" : "e64bf39a845dd6dc",
+  "name" : "多轮对话 - 咨询洗发水",
+  "fullName" : "test_chat#test_chat_session",
+  "historyId" : "22f5e8c479e128272bf1f85d4cca6a24",
+  "time" : {
+    "start" : 1770451432405,
+    "stop" : 1770451436982,
+    "duration" : 4577
+  },
+  "description" : "\n    多轮对话测试：同一个用户连续发送多条消息\n    服务端根据 username 自动维护对话历史，客户端只需传当前消息\n    支持两种消息类型：\n    1. 普通文本消息: {\"txt\": \"你好\"}\n    2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n    ",
+  "descriptionHtml" : "<pre><code>多轮对话测试：同一个用户连续发送多条消息\n服务端根据 username 自动维护对话历史，客户端只需传当前消息\n支持两种消息类型：\n1. 普通文本消息: {&quot;txt&quot;: &quot;你好&quot;}\n2. 商品咨询消息: {&quot;txt&quot;: &quot;商品链接&quot;, &quot;product&quot;: {&quot;id&quot;: &quot;...&quot;, &quot;title&quot;: &quot;...&quot;, &quot;url&quot;: &quot;...&quot;}}\n</code></pre>\n",
+  "status" : "broken",
+  "statusMessage" : "UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence",
+  "statusTrace" : "session_name = '咨询洗发水'\nmessages = [{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]\n\n    @allure.feature(\"多轮对话\")\n    @pytest.mark.parametrize(\"session_name,messages\", test_chat_sessions)\n    def test_chat_session(session_name, messages):\n        \"\"\"\n        多轮对话测试：同一个用户连续发送多条消息\n        服务端根据 username 自动维护对话历史，客户端只需传当前消息\n        支持两种消息类型：\n        1. 普通文本消息: {\"txt\": \"你好\"}\n        2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n        \"\"\"\n        allure.dynamic.story(session_name)\n        allure.dynamic.title(f\"多轮对话 - {session_name}\")\n    \n        username = generate_username()\n        allure.attach(username, name=\"用户名\", attachment_type=allure.attachment_type.TEXT)\n    \n        for i, msg in enumerate(messages, 1):\n            # 解析消息内容\n            if isinstance(msg, dict):\n                txt = msg['txt']\n                product = msg.get('product')\n            else:\n                txt = msg\n                product = None\n    \n            with allure.step(f\"第 {i} 轮对话: {txt[:30]}\"):\n                if product:\n                    allure.attach(\n                        json.dumps(product, ensure_ascii=False, indent=2),\n                        name=f\"第 {i} 轮 - 商品信息\",\n                        attachment_type=allure.attachment_type.JSON\n                    )\n    \n                allure.attach(txt, name=f\"第 {i} 轮 - 用户消息\", attachment_type=allure.attachment_type.TEXT)\n    \n                # 调用聊天接口\n                response = chat(txt, TOKEN, username, inquiry_product=product)\n                result = response.json()\n    \n                # 基础断言\n                assert result['code'] == 200, f\"接口返回异常: {result['message']}\"\n                assert result['message'] == 'success'\n                assert len(result['data']['ai_actions']) > 0, \"AI 没有返回任何回复\"\n    \n                # 提取并记录 AI 回复\n                full_reply = extract_reply(result)\n                assert len(full_reply) > 0, \"AI 回复内容为空\"\n                allure.attach(full_reply, name=f\"第 {i} 轮 - AI 回复\", attachment_type=allure.attachment_type.TEXT)\n>               print(f\"AI: {full_reply}\")\nE               UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence\n\ntest_chat.py:89: UnicodeEncodeError",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1770451432277,
+      "stop" : 1770451432404,
+      "duration" : 127
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    多轮对话测试：同一个用户连续发送多条消息\n    服务端根据 username 自动维护对话历史，客户端只需传当前消息\n    支持两种消息类型：\n    1. 普通文本消息: {\"txt\": \"你好\"}\n    2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n    ",
+    "status" : "broken",
+    "statusMessage" : "UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence",
+    "statusTrace" : "session_name = '咨询洗发水'\nmessages = [{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]\n\n    @allure.feature(\"多轮对话\")\n    @pytest.mark.parametrize(\"session_name,messages\", test_chat_sessions)\n    def test_chat_session(session_name, messages):\n        \"\"\"\n        多轮对话测试：同一个用户连续发送多条消息\n        服务端根据 username 自动维护对话历史，客户端只需传当前消息\n        支持两种消息类型：\n        1. 普通文本消息: {\"txt\": \"你好\"}\n        2. 商品咨询消息: {\"txt\": \"商品链接\", \"product\": {\"id\": \"...\", \"title\": \"...\", \"url\": \"...\"}}\n        \"\"\"\n        allure.dynamic.story(session_name)\n        allure.dynamic.title(f\"多轮对话 - {session_name}\")\n    \n        username = generate_username()\n        allure.attach(username, name=\"用户名\", attachment_type=allure.attachment_type.TEXT)\n    \n        for i, msg in enumerate(messages, 1):\n            # 解析消息内容\n            if isinstance(msg, dict):\n                txt = msg['txt']\n                product = msg.get('product')\n            else:\n                txt = msg\n                product = None\n    \n            with allure.step(f\"第 {i} 轮对话: {txt[:30]}\"):\n                if product:\n                    allure.attach(\n                        json.dumps(product, ensure_ascii=False, indent=2),\n                        name=f\"第 {i} 轮 - 商品信息\",\n                        attachment_type=allure.attachment_type.JSON\n                    )\n    \n                allure.attach(txt, name=f\"第 {i} 轮 - 用户消息\", attachment_type=allure.attachment_type.TEXT)\n    \n                # 调用聊天接口\n                response = chat(txt, TOKEN, username, inquiry_product=product)\n                result = response.json()\n    \n                # 基础断言\n                assert result['code'] == 200, f\"接口返回异常: {result['message']}\"\n                assert result['message'] == 'success'\n                assert len(result['data']['ai_actions']) > 0, \"AI 没有返回任何回复\"\n    \n                # 提取并记录 AI 回复\n                full_reply = extract_reply(result)\n                assert len(full_reply) > 0, \"AI 回复内容为空\"\n                allure.attach(full_reply, name=f\"第 {i} 轮 - AI 回复\", attachment_type=allure.attachment_type.TEXT)\n>               print(f\"AI: {full_reply}\")\nE               UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence\n\ntest_chat.py:89: UnicodeEncodeError",
+    "steps" : [ {
+      "name" : "第 1 轮对话: 你好",
+      "time" : {
+        "start" : 1770451432405,
+        "stop" : 1770451436980,
+        "duration" : 4575
+      },
+      "status" : "broken",
+      "statusMessage" : "UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence\n",
+      "statusTrace" : "  File \"E:\\code\\code-test-api\\Smart Growth\\test_chat.py\", line 89, in test_chat_session\n    print(f\"AI: {full_reply}\")\n",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "f37599d19fca91f3",
+        "name" : "第 1 轮 - 用户消息",
+        "source" : "f37599d19fca91f3.txt",
+        "type" : "text/plain",
+        "size" : 6
+      }, {
+        "uid" : "47b1909378fd929b",
+        "name" : "第 1 轮 - AI 回复",
+        "source" : "47b1909378fd929b.txt",
+        "type" : "text/plain",
+        "size" : 45
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 2,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "67b31d0168fe1fad",
+      "name" : "用户名",
+      "source" : "67b31d0168fe1fad.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "attachmentsCount" : 3,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 1
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "咨询洗发水"
+  }, {
+    "name" : "feature",
+    "value" : "多轮对话"
+  }, {
+    "name" : "suite",
+    "value" : "test_chat"
+  }, {
+    "name" : "host",
+    "value" : "WIN-VO7C9Q1F77H"
+  }, {
+    "name" : "thread",
+    "value" : "42900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "messages",
+    "value" : "[{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]"
+  }, {
+    "name" : "session_name",
+    "value" : "'咨询洗发水'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Test defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "e64bf39a845dd6dc.json",
+  "parameterValues" : [ "[{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]", "'咨询洗发水'" ]
+}

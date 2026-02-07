@@ -1,0 +1,156 @@
+{
+  "uid" : "f96a0cc661f31aff",
+  "name" : "商品问答 - 可以用多长时间？",
+  "fullName" : "test_chat#test_product_chat",
+  "historyId" : "8cfcd25904c1458540c2676eaeb3b927",
+  "time" : {
+    "start" : 1770451486395,
+    "stop" : 1770451492822,
+    "duration" : 6427
+  },
+  "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+  "descriptionHtml" : "<pre><code>自动随机获取商品并提问测试：\n1. 从店铺商品列表中随机选取一个商品\n2. 用商品信息 + 问题发给 AI\n3. 验证 AI 能针对该商品给出回答\n\n每个问题都是独立的对话（不同 username），且随机选取不同商品\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1770451432277,
+      "stop" : 1770451432404,
+      "duration" : 127
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "随机获取商品",
+      "time" : {
+        "start" : 1770451486395,
+        "stop" : 1770451486458,
+        "duration" : 63
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "e81b99aa4821f4d4",
+        "name" : "商品信息",
+        "source" : "e81b99aa4821f4d4.json",
+        "type" : "application/json",
+        "size" : 189
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送问题: 可以用多长时间？",
+      "time" : {
+        "start" : 1770451486458,
+        "stop" : 1770451492819,
+        "duration" : 6361
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "eeeb42c3d21c121d",
+        "name" : "用户问题",
+        "source" : "eeeb42c3d21c121d.txt",
+        "type" : "text/plain",
+        "size" : 24
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "验证 AI 回复",
+      "time" : {
+        "start" : 1770451492819,
+        "stop" : 1770451492819,
+        "duration" : 0
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "1f754ca29d2f9c",
+        "name" : "AI 回复",
+        "source" : "1f754ca29d2f9c.txt",
+        "type" : "text/plain",
+        "size" : 80
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "26d35181467c4f98",
+      "name" : "用户名",
+      "source" : "26d35181467c4f98.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "可以用多长时间？"
+  }, {
+    "name" : "feature",
+    "value" : "商品问答"
+  }, {
+    "name" : "suite",
+    "value" : "test_chat"
+  }, {
+    "name" : "host",
+    "value" : "WIN-VO7C9Q1F77H"
+  }, {
+    "name" : "thread",
+    "value" : "42900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "question",
+    "value" : "'可以用多长时间？'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "f96a0cc661f31aff.json",
+  "parameterValues" : [ "'可以用多长时间？'" ]
+}

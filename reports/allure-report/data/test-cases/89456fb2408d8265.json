@@ -1,0 +1,156 @@
+{
+  "uid" : "89456fb2408d8265",
+  "name" : "商品问答 - 保质期多久？",
+  "fullName" : "test_chat#test_product_chat",
+  "historyId" : "0971ece2a8789fbd6840f113d1393a1a",
+  "time" : {
+    "start" : 1770451511353,
+    "stop" : 1770451514006,
+    "duration" : 2653
+  },
+  "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+  "descriptionHtml" : "<pre><code>自动随机获取商品并提问测试：\n1. 从店铺商品列表中随机选取一个商品\n2. 用商品信息 + 问题发给 AI\n3. 验证 AI 能针对该商品给出回答\n\n每个问题都是独立的对话（不同 username），且随机选取不同商品\n</code></pre>\n",
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "_session_faker",
+    "time" : {
+      "start" : 1770451432277,
+      "stop" : 1770451432404,
+      "duration" : 127
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "hasContent" : false,
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0
+  } ],
+  "testStage" : {
+    "description" : "\n    自动随机获取商品并提问测试：\n    1. 从店铺商品列表中随机选取一个商品\n    2. 用商品信息 + 问题发给 AI\n    3. 验证 AI 能针对该商品给出回答\n\n    每个问题都是独立的对话（不同 username），且随机选取不同商品\n    ",
+    "status" : "passed",
+    "steps" : [ {
+      "name" : "随机获取商品",
+      "time" : {
+        "start" : 1770451511353,
+        "stop" : 1770451511413,
+        "duration" : 60
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "169b71bade0913ac",
+        "name" : "商品信息",
+        "source" : "169b71bade0913ac.json",
+        "type" : "application/json",
+        "size" : 189
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "发送问题: 保质期多久？",
+      "time" : {
+        "start" : 1770451511413,
+        "stop" : 1770451514003,
+        "duration" : 2590
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "68fce4f51ff35ef",
+        "name" : "用户问题",
+        "source" : "68fce4f51ff35ef.txt",
+        "type" : "text/plain",
+        "size" : 18
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    }, {
+      "name" : "验证 AI 回复",
+      "time" : {
+        "start" : 1770451514003,
+        "stop" : 1770451514005,
+        "duration" : 2
+      },
+      "status" : "passed",
+      "steps" : [ ],
+      "attachments" : [ {
+        "uid" : "29242117e21e69a5",
+        "name" : "AI 回复",
+        "source" : "29242117e21e69a5.txt",
+        "type" : "text/plain",
+        "size" : 33
+      } ],
+      "parameters" : [ ],
+      "hasContent" : true,
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : false,
+      "stepsCount" : 0
+    } ],
+    "attachments" : [ {
+      "uid" : "6b38d2ba471d5688",
+      "name" : "用户名",
+      "source" : "6b38d2ba471d5688.txt",
+      "type" : "text/plain",
+      "size" : 16
+    } ],
+    "parameters" : [ ],
+    "hasContent" : true,
+    "attachmentsCount" : 4,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 3
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "story",
+    "value" : "保质期多久？"
+  }, {
+    "name" : "feature",
+    "value" : "商品问答"
+  }, {
+    "name" : "suite",
+    "value" : "test_chat"
+  }, {
+    "name" : "host",
+    "value" : "WIN-VO7C9Q1F77H"
+  }, {
+    "name" : "thread",
+    "value" : "42900-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_chat"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ {
+    "name" : "question",
+    "value" : "'保质期多久？'"
+  } ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ ]
+  },
+  "source" : "89456fb2408d8265.json",
+  "parameterValues" : [ "'保质期多久？'" ]
+}

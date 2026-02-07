@@ -1,0 +1,26 @@
+{
+  "uid" : "4b4757e66a1912dae1a509f688f20b0f",
+  "name" : "categories",
+  "children" : [ {
+    "name" : "Test defects",
+    "children" : [ {
+      "name" : "UnicodeEncodeError: 'gbk' codec can't encode character '\\U0001f60a' in position 19: illegal multibyte sequence",
+      "children" : [ {
+        "name" : "多轮对话 - 咨询洗发水",
+        "uid" : "e64bf39a845dd6dc",
+        "parentUid" : "a4c9ff2b9f72b4fafcb51d15ddf80fb2",
+        "status" : "broken",
+        "time" : {
+          "start" : 1770451432405,
+          "stop" : 1770451436982,
+          "duration" : 4577
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ "[{'txt': '你好'}, {'txt': '推荐一款洗发水'}, {'txt': '这款多少钱'}]", "'咨询洗发水'" ]
+      } ],
+      "uid" : "a4c9ff2b9f72b4fafcb51d15ddf80fb2"
+    } ],
+    "uid" : "bdbf199525818fae7a8651db9eafe741"
+  } ]
+}

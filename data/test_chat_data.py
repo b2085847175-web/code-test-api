@@ -9,9 +9,13 @@ def load_yaml(filename):
         return yaml.safe_load(f)
 
 
-# 读取 YAML 数据，转为 pytest 参数化格式
-# 每个 session 代表一个用户的多轮对话
-# 格式: [(session_name, messages), ...]
-# messages: [{"txt": "...", "keywords": [...]}, ...]
+# 读取 YAML 数据
 _raw = load_yaml("chat_data.yaml")
-test_chat_sessions = [(item['session'], item['messages']) for item in _raw]
+
+# 多轮对话测试数据
+# 格式: [(session_name, messages), ...]
+test_chat_sessions = [(item['session'], item['messages']) for item in _raw['chat_sessions']]
+
+# 商品问答测试数据
+# 格式: ["问题1", "问题2", ...]
+product_questions = _raw['product_questions']
