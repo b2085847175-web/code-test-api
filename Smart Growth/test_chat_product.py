@@ -5,13 +5,13 @@ import json
 import time
 import pytest
 import allure
-from api.chat import chat
+from api.chat import chat_with_product_id
 from common.tool import get_token
 
 
 def load_yaml_config():
-    """加载聊天测试专用的 yaml 配置"""
-    filepath = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "chat_data.yaml")
+    """加载商品测试专用的 yaml 配置"""
+    filepath = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "test_chat_product.yaml")
     with open(filepath, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 
@@ -45,19 +45,30 @@ def safe_print(text):
         print(text.encode('utf-8', errors='replace').decode('utf-8', errors='replace'))
 
 
-class TestChatSession:
-    """聊天测试类"""
+class TestChatWithProduct:
+    """商品咨询测试类"""
 
-    @allure.feature("普通聊天")
+    @allure.feature("商品咨询")
     @allure.story("多轮对话")
     def test_multi_round_chat(self):
-        """普通多轮对话测试"""
+        """通过商品ID进行多轮对话测试"""
         username = generate_username()
-        questions = CONFIG.get('test_questions', ['你好'])
+        product_id = CONFIG.get('product_id')
+        questions = CONFIG.get('test_questions', ['介绍一下这个商品'])
 
         allure.attach(username, name="用户名", attachment_type=allure.attachment_type.TEXT)
+        allure.attach(product_id, name="商品ID", attachment_type=allure.attachment_type.TEXT)
 
         messages_history = []
+        from api.product import get_product_by_id
+        session_product = get_product_by_id(TOKEN, shop_id="585", product_id=product_id)
+        if session_product:
+            allure.attach(
+                json.dumps(session_product, ensure_ascii=False, indent=2),
+                name="会话商品信息",
+                attachment_type=allure.attachment_type.JSON
+            )
+            print(f"\n[会话商品] {session_product['title']}\n")
 
         for i, txt in enumerate(questions, 1):
             with allure.step(f"第 {i} 轮对话: {txt[:30]}"):
@@ -71,7 +82,8 @@ class TestChatSession:
                 }
                 messages_history.append(user_msg)
 
-                response = chat(txt, TOKEN, username, full_messages=messages_history)
+                from api.chat import chat
+                response = chat(txt, TOKEN, username, inquiry_product=session_product, full_messages=messages_history)
                 result = response.json()
 
                 assert result['code'] == 200

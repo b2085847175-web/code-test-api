@@ -92,3 +92,49 @@ def list_products_brief(token, shop_id="585", page=1, page_size=10):
     print(f"{'='*60}")
 
     return items
+
+
+def get_product_by_id(token, shop_id="585", product_id="", max_pages=3, page_size=20):
+    """
+    根据商品ID获取商品信息，返回 inquiry_product 格式
+
+    参数:
+        token: 登录 token
+        shop_id: 店铺ID，默认 585
+        product_id: 商品ID（字符串或数字）
+        max_pages: 最多搜索多少页，默认3页
+        page_size: 每页数量，默认20条
+
+    返回:
+        dict: 商品信息，格式为 {"id": "...", "title": "...", "url": "..."}
+        如果未找到商品，返回 None
+    """
+    if not product_id:
+        print("商品ID不能为空")
+        return None
+
+    product_id_str = str(product_id)
+
+    for page in range(1, max_pages + 1):
+        response = get_products(token, shop_id, page=page, page_size=page_size)
+        result = response.json()
+
+        if result.get('code') != 200:
+            print(f"获取商品列表失败: {result.get('message')}")
+            return None
+
+        items = result.get('result', {}).get('data', [])
+        if not items:
+            break
+
+        for item in items:
+            if str(item.get('product_id', '')) == product_id_str:
+                print(f"已找到商品: [{product_id_str}] {item.get('product_title')}")
+                return {
+                    "id": product_id_str,
+                    "title": item.get('product_title', ''),
+                    "url": f"https://item.taobao.com/item.htm?id={product_id_str}"
+                }
+
+    print(f"未找到商品ID: {product_id_str}（已搜索 {max_pages} 页）")
+    return None
